@@ -1,0 +1,23 @@
+.file-input {
+  display: none;
+}
+.select-pdf-wrapper{
+  display: flex;
+  gap: 1rem;
+}
+
+.select-pdf {
+  display: inline-block;
+  background: white;
+  padding: 0.5rem 0.5rem;
+  margin-left: 1rem;
+  border-radius: 12px;
+}
+
+.upload-button {
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem 0.5rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}

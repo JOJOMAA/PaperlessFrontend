@@ -1,0 +1,14 @@
+<input type="file" class="file-input" accept="application/pdf" #fileUpload>
+
+<div class="select-pdf-wrapper">
+  <div class="select-pdf">
+    {{fileName || "No file uploaded yet."}}
+
+    <button mat-mini-fab color="primary" class="select-button"
+      (click)="fileUpload.click()">
+      <mat-icon>attach_file</mat-icon>
+    </button>
+  </div>
+</div>
+
+
