@@ -10,14 +10,25 @@
   display: inline-block;
   background: white;
   padding: 0.5rem 0.5rem;
-  margin-left: 1rem;
   border-radius: 12px;
+  display: flex;
+}
+
+.upload-pdf-wrapper {
+  background: grey;
+  display:  inline-grid;
+  border-radius: 12px;
+  padding: 0.5rem 0.5rem;
+  margin-left: 1rem;
 }
 
 .upload-button {
   background: white;
   border-radius: 12px;
   padding: 0.5rem 0.5rem;
-  margin-left: 1rem;
   margin-top: 1rem;
+}
+
+.upload-title{
+  text-align: center;
 }

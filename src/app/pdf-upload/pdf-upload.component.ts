@@ -13,25 +13,32 @@ import { MatIconModule} from "@angular/material/icon";
 })
 
 //https://blog.angular-university.io/angular-file-upload/
-
+//ToDO: Upload Bestätigung anzeigen
 export class PdfUploadComponent {
   fileName = '';
-
+  file:File = null;
   constructor(private http: HttpClient){}
 
-  uploadPdf(event){
-    const file:File = event.target.files[0];
+  selectPdf(event){
+     this.file = event.target.files[0];
+     this.fileName = this.file.name;
+  }
 
+  uploadPdf(file){
     if(file){
-      this.fileName = file.name;
-
       const formData = new FormData();
 
       formData.append("file", file);
 
-      formData.append("name", file.name)
+      formData.append("name", file.name);
       const upload$ = this.http.post("http://localhost:8081/documents/upload", formData);
       upload$.subscribe();
+      this.resetFile()
     }
+  }
+
+  resetFile(){
+    this.file = null;
+    this.fileName = '';
   }
 }
