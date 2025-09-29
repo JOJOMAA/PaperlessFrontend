@@ -1,0 +1,6 @@
+.pdf-list-wrapper {
+  background: grey;
+  border-radius: 12px;
+  padding: 0.5rem 0.5rem;
+  display:  inline-grid;
+}
