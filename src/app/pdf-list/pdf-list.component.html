@@ -3,9 +3,12 @@
 
   <div class="pdf-list">
     <ul>
-      <li *ngFor="let document of documentList">
+      <span *ngFor="let document of documentList" class="download-span">
+      <p class="list-item">
         {{ document.name }}
-      </li>
+        <button mat-button class="download-button" color="primary" (click)="downloadPdf(document.id)">Download</button>
+      </p>
+      </span>
     </ul>
   </div>
 </div>
